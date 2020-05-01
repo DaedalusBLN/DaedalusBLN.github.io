@@ -14,4 +14,6 @@ after_success: |
     git commit --allow-empty -m "Update repo [skip ci]"
     git remote add authenticated https://${GH_TOKEN}@github.com/DaedalusBLN/DaedalusBLN.github.io.git > /dev/null 2>&1
     git push --quiet authenticated master &>/dev/null
-fi
+  else
+    echo "Github token variable has not been set up in Travis-CI repository settings."
+  fi
