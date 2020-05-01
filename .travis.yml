@@ -1,0 +1,17 @@
+language: python
+python:
+  - "2.7"
+  
+script:
+  - python ./_repo_xml_generator.py
+  
+after_success: |
+  if [ -n "$GH_TOKEN" ]; then
+    git config user.name "Travis CI" > /dev/null 2>&1
+    git config user.email "Travis CI" > /dev/null 2>&1
+    git checkout -q master > /dev/null 2>&1
+    git add zips/*.* > /dev/null 2>&1
+    git commit --allow-empty -m "Update repo [skip ci]" > /dev/null 2>&1
+    git remote add authenticated https://DaedalusBLN:$GH_TOKEN@github.com/DaedalusBLN/DaedalusBLN.github.io.git > /dev/null 2>&1
+    git push --quiet authenticated master &>/dev/null
+  fi
