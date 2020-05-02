@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.mimic"
-  version="6.0.1"
+  version="6.0.2"
   name="Mimic"
   provider-name="braz, DaedalusBLN">
     <requires>
@@ -94,6 +94,6 @@
             <screenshot>resources/screenshot-09.jpg</screenshot>
             <screenshot>resources/screenshot-10.jpg</screenshot>
         </assets>
-        <news>6.0.0[CR]- Updated for Kodi 18 Leia.[CR]- Removed support for skin.helper.service and colorbox scripts.</news>
+        <news>6.0.2- Updated for Kodi 18 Leia.</news>
     </extension>
 </addon>
