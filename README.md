@@ -1,4 +1,4 @@
-# DaedalusBLN Kodi Repository
+## DaedalusBLN Kodi Repository
 
 This unofficial Kodi add-ons repository is based on [drinfernoo](https://github.com/drinfernoo)'s **repository.example** template and the [Add-on zips/Repo XML Generator](https://github.com/drinfernoo/repository.example/blob/master/_repo_xml_generator.py) python script.
 
