@@ -121,7 +121,7 @@
 
 <addon
   id="skin.omni202"
-  version="1.0.1"
+  version="1.0.2"
   name="Omni202"
   provider-name="braz, DaedalusBLN">
 	<requires>
