@@ -16,6 +16,11 @@ Aim is to restore script.skinshortcuts and custom widgets functionality, with ba
 If you would like to express your appreciation for this skin, please consider a donation to the XBMC Foundation. http://kodi.tv/contribute/donate/
 
 ***
+**OMNI202 v1.0.2**
+- VideoOSD: SeekBar dialog: Show movie/episode plot and title in pause menu. (Feature requested by user.)
+
+
+***
 **OMNI202 v1.0.1**
 - Remove uppercase tags, as it messes up accentuation in certain languages.
 - Fix ExtendedInfo integration.

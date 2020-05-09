@@ -5,7 +5,7 @@
     <!--<visible>[[Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Player.Caching] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Window.IsActive(playerprocessinfo)] + Window.IsActive(fullscreenvideo)] | Window.IsActive(visualisation) | !String.IsEmpty(Player.SeekNumeric) | [[Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + !Window.IsActive(pvrosdchannels) + !String.IsEmpty(PVR.ChannelNumberInput)]</visible>-->
     <visible>!Window.IsActive(sliderdialog)</visible>
     <controls>
-        <control type="group">
+    <control type="group">
             <animation effect="slide" start="0,108" end="0,0" time="200">WindowOpen</animation>
             <animation effect="slide" start="0,108" end="0,0" time="200">VisibleChange</animation>
             <animation effect="slide" start="0,0" end="0,108" time="200">WindowClose</animation>
@@ -67,6 +67,117 @@
             </control>
             <control type="label">
                 <top>48</top>
+                <left>30</left>
+                <width>1860</width>
+                <height>35</height>
+                <font>font12</font>
+                <align>center</align>
+                <label>$VAR[SeekLabelVar]</label>
+            </control>
+        </control>
+        <control type="group">
+            <animation effect="slide" start="0,108" end="0,0" time="200">WindowOpen</animation>
+            <animation effect="slide" start="0,108" end="0,0" time="200">VisibleChange</animation>
+            <animation effect="slide" start="0,0" end="0,108" time="200">WindowClose</animation>
+            <top>772</top>
+            <visible>!VideoPlayer.Content(livetv) + VideoPlayer.Content(episodes) | !VideoPlayer.Content(livetv) + VideoPlayer.Content(movies)</visible>
+            <control type="image">
+                <width>1920</width>
+                <height>308</height>
+                <texture colordiffuse="background">$VAR[CommonBackgroundOverlay]</texture>
+            </control>
+            <control type="image">
+                <top>8</top>
+                <width>1920</width>
+                <height>300</height>
+                <texture colordiffuse="background">dialog.png</texture>
+            </control>
+            <control type="image">
+                <top>8</top>
+				<left>30</left>
+                <width>220</width>
+                <height>220</height>
+                <aspectratio aligny="center" align="center">keep</aspectratio>
+                <texture background="true">$INFO[Player.Art(thumb)]</texture>
+            </control>
+            <control type="label">
+                <left>300</left>
+                <top>18</top>				
+                <width>1560</width>
+                <height>40</height>
+                <font>font30</font>
+                <aligny>top</aligny>
+                <label>$VAR[PlayerTitleLabelVar] [COLOR highlight]($INFO[VideoPlayer.Year])[/COLOR]</label>
+                <visible>!VideoPlayer.Content(episodes) + VideoPlayer.Content(movies)</visible>
+                <scroll>true</scroll>
+            </control>
+            <control type="label">
+                <left>300</left>
+                <top>18</top>
+                <width>1560</width>
+                <height>40</height>
+                <font>font30</font>
+                <aligny>top</aligny>
+                <label>$INFO[VideoPlayer.Season,,X]$INFO[VideoPlayer.Episode,,. ]$VAR[PlayerTitleLabelVar] [COLOR highlight]($INFO[VideoPlayer.TVShowTitle])[/COLOR]</label>
+                <visible>VideoPlayer.Content(episodes)</visible>
+                <scroll>true</scroll>
+            </control>
+            <control type="textbox">
+                <width>1560</width>
+                <height>160</height>
+				<left>300</left>
+				<top>78</top>
+                <font>font14_textbox</font>
+                <aligny>top</aligny>
+                <include>AutoscrollDefault</include>
+                <label>[COLOR highlight]$INFO[VideoPlayer.Tagline,, ][/COLOR]$INFO[VideoPlayer.Plot]</label>
+                <visible>VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)</visible>
+                </control>
+            <control type="progress">
+                <left>30</left>
+                <top>238</top>
+                <width>1860</width>
+                <height>8</height>
+                <info>Player.ProgressCache</info>
+                <midtexture colordiffuse="44ffffff">osd/midtexture.png</midtexture>
+            </control>
+            <control type="progress">
+                <left>30</left>
+                <top>238</top>
+                <width>1860</width>
+                <height>8</height>
+                <info>Player.Progress</info>
+            </control>
+            <control type="slider" id="401">
+                <left>30</left>
+                <top>238</top>
+                <width>1860</width>
+                <height>8</height>
+                <controloffsetx>75</controloffsetx>
+                <controloffsety>0</controloffsety>
+                <texturesliderbar>blank.png</texturesliderbar>
+                <textureslidernib>osd/seekbar_nib.png</textureslidernib>
+                <textureslidernibfocus>osd/seekbar_nib.png</textureslidernibfocus>
+            </control>
+            <control type="label">
+                <top>248</top>
+                <left>30</left>
+                <width>1860</width>
+                <height>35</height>
+                <font>font12</font>
+                <label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+            </control>
+            <control type="label">
+                <top>248</top>
+                <left>30</left>
+                <width>1860</width>
+                <height>35</height>
+                <font>font12</font>
+                <align>right</align>
+                <label>$INFO[Player.TimeRemaining]$INFO[Player.Duration, / ]</label>
+            </control>
+            <control type="label">
+                <top>248</top>
                 <left>30</left>
                 <width>1860</width>
                 <height>35</height>
