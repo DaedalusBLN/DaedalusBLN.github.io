@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.mimic"
-  version="6.0.2"
+  version="6.0.3"
   name="Mimic"
   provider-name="braz, DaedalusBLN">
     <requires>

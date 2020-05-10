@@ -74,6 +74,59 @@
             <animation effect="slide" start="0,300" end="0,0" time="200">WindowOpen</animation>
             <animation effect="slide" start="0,300" end="0,0" time="200">VisibleChange</animation>
             <animation effect="slide" start="0,0" end="0,300" time="200">WindowClose</animation>
+            <top>765</top>
+            <visible>!VideoPlayer.Content(livetv) + VideoPlayer.Content(movies) | !VideoPlayer.Content(livetv) + VideoPlayer.Content(episodes)</visible>
+            <control type="image">
+                <top>-16</top>
+                <left>-16</left>
+                <width>1952</width>
+                <height>250</height>
+                <texture border="16">dialog_context.png</texture>
+                <colordiffuse>dialog</colordiffuse>
+            </control>
+            <control type="image">
+                <left>30</left>
+                <width>220</width>
+                <height>220</height>
+                <aspectratio aligny="center" align="center">keep</aspectratio>
+                <texture background="true">$INFO[Player.Art(thumb)]</texture>
+            </control>
+            <control type="label">
+                <left>300</left>
+                <top>10</top>
+                <width>1585</width>
+                <height>40</height>
+                <font>font30</font>
+                <scroll>true</scroll>
+                <label>$VAR[PlayerTitleLabelVar] [COLOR highlight]($INFO[VideoPlayer.Year])[/COLOR]</label>
+                <visible>!VideoPlayer.Content(episodes) + VideoPlayer.Content(movies)</visible>
+			</control>
+            <control type="label">
+                <left>300</left>
+                <top>10</top>
+                <width>1585</width>
+                <height>40</height>
+                <font>font30</font>
+                <scroll>true</scroll>
+                <label>$INFO[VideoPlayer.Season,,X]$INFO[VideoPlayer.Episode,,. ]$VAR[PlayerTitleLabelVar] [COLOR highlight]($INFO[VideoPlayer.TVShowTitle])[/COLOR]</label>
+                <visible>VideoPlayer.Content(episodes)</visible>
+			</control>
+            <control type="textbox">
+                <left>300</left>
+                <top>60</top>
+                <width>1585</width>
+                <height>160</height>
+                <font>font14_textbox</font>
+                <aligny>top</aligny>
+                <include>AutoscrollDefault</include>
+                <label>[COLOR highlight]$INFO[VideoPlayer.Tagline,, ][/COLOR]$INFO[VideoPlayer.Plot]</label>
+                <visible>VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)</visible>
+            </control>
+		</control>
+        <control type="group">
+            <animation effect="slide" start="0,300" end="0,0" time="200">WindowOpen</animation>
+            <animation effect="slide" start="0,300" end="0,0" time="200">VisibleChange</animation>
+            <animation effect="slide" start="0,0" end="0,300" time="200">WindowClose</animation>
             <top>780</top>
             <visible>VideoPlayer.Content(livetv)</visible>
             <control type="image">
