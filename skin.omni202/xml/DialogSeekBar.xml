@@ -83,13 +83,13 @@
             <visible>!VideoPlayer.Content(livetv) + VideoPlayer.Content(episodes) | !VideoPlayer.Content(livetv) + VideoPlayer.Content(movies)</visible>
             <control type="image">
                 <width>1920</width>
-                <height>308</height>
+                <height>238</height>
                 <texture colordiffuse="background">$VAR[CommonBackgroundOverlay]</texture>
             </control>
             <control type="image">
                 <top>8</top>
                 <width>1920</width>
-                <height>300</height>
+                <height>230</height>
                 <texture colordiffuse="background">dialog.png</texture>
             </control>
             <control type="image">
@@ -132,58 +132,6 @@
                 <include>AutoscrollDefault</include>
                 <label>[COLOR highlight]$INFO[VideoPlayer.Tagline,, ][/COLOR]$INFO[VideoPlayer.Plot]</label>
                 <visible>VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)</visible>
-                </control>
-            <control type="progress">
-                <left>30</left>
-                <top>238</top>
-                <width>1860</width>
-                <height>8</height>
-                <info>Player.ProgressCache</info>
-                <midtexture colordiffuse="44ffffff">osd/midtexture.png</midtexture>
-            </control>
-            <control type="progress">
-                <left>30</left>
-                <top>238</top>
-                <width>1860</width>
-                <height>8</height>
-                <info>Player.Progress</info>
-            </control>
-            <control type="slider" id="401">
-                <left>30</left>
-                <top>238</top>
-                <width>1860</width>
-                <height>8</height>
-                <controloffsetx>75</controloffsetx>
-                <controloffsety>0</controloffsety>
-                <texturesliderbar>blank.png</texturesliderbar>
-                <textureslidernib>osd/seekbar_nib.png</textureslidernib>
-                <textureslidernibfocus>osd/seekbar_nib.png</textureslidernibfocus>
-            </control>
-            <control type="label">
-                <top>248</top>
-                <left>30</left>
-                <width>1860</width>
-                <height>35</height>
-                <font>font12</font>
-                <label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
-            </control>
-            <control type="label">
-                <top>248</top>
-                <left>30</left>
-                <width>1860</width>
-                <height>35</height>
-                <font>font12</font>
-                <align>right</align>
-                <label>$INFO[Player.TimeRemaining]$INFO[Player.Duration, / ]</label>
-            </control>
-            <control type="label">
-                <top>248</top>
-                <left>30</left>
-                <width>1860</width>
-                <height>35</height>
-                <font>font12</font>
-                <align>center</align>
-                <label>$VAR[SeekLabelVar]</label>
             </control>
         </control>
         <control type="group">
