@@ -150,8 +150,8 @@
                     <align>center</align>
                     <height>100%</height>
                     <itemgap>32</itemgap>
-                    <onleft>3</onleft>
-                    <onright>4</onright>
+                    <onleft>4</onleft>
+                    <onright>5</onright>
                     <ondown>9003</ondown>
                     <onup condition="String.IsEmpty(Window(Home).Property(OSDInfo))">SetProperty(OSDInfo,1,Home)</onup>
                     <onup condition="!String.IsEmpty(Window(Home).Property(OSDInfo))">ClearProperty(OSDInfo,Home)</onup>

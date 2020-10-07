@@ -487,7 +487,7 @@
     </include>
 
     <include name="OSD_Controls_Video_Right">
-        <control type="button" id="4">
+        <control type="button" id="5">
             <description>Extra Info</description>
             <label>$LOCALIZE[31086]</label>
             <onclick condition="!Player.Paused + !Skin.HasSetting(DontPauseOSD)">SetProperty(OSDExtendedInfo,1,Home)</onclick>
@@ -497,14 +497,14 @@
             <include>OSD_TextButton</include>
             <enable>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</enable>
         </control>
-        <control type="button" id="5">
+        <control type="button" id="6">
             <description>3d Mode</description>
             <label>14232</label>
             <onclick>StereoMode</onclick>
             <enable>VideoPlayer.IsStereoscopic</enable>
             <include>OSD_TextButton</include>
         </control>
-        <control type="button" id="6">
+        <control type="button" id="7">
             <description>Bookmarks</description>
             <label>298</label>
             <onclick>ActivateWindow(125)</onclick>
@@ -513,20 +513,20 @@
     </include>
 
     <include name="OSD_Controls_LiveTV_Right">
-        <control type="button" id="4">
+        <control type="button" id="5">
             <description>CHANNELS</description>
             <label>19019</label>
             <include>OSD_TextButton</include>
             <onclick>ActivateWindow(pvrosdchannels)</onclick>
         </control>
-        <control type="button" id="5">
+        <control type="button" id="6">
             <description>EPG</description>
             <label>$LOCALIZE[19030] / $LOCALIZE[19031]</label>
             <onclick>ActivateWindow(pvrchannelguide)</onclick>
             <include>OSD_TextButton</include>
         </control>
 
-        <control type="button" id="6">
+        <control type="button" id="7">
             <description>TIMELINE</description>
             <include>OSD_TextButton</include>
             <label>19032</label>
