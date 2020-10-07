@@ -234,7 +234,7 @@
 	</extension>
 </addon>
 
-<addon id="skin.fuse.neue" version="1.0.5" name="(fuse)neue" provider-name="jurialmunkey, bartolomesoriano, DaedalusBLN">
+<addon id="skin.fuse.neue" version="1.0.6" name="(fuse)neue" provider-name="jurialmunkey, bartolomesoriano, DaedalusBLN">
     <requires>
         <import addon="xbmc.gui" version="5.14.0"/>
         <import addon="script.skinshortcuts" version="0.4.0"/>
