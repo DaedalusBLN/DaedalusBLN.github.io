@@ -1,0 +1,6 @@
+<views>
+	  <view id="View_Posters" value="50" languageid="31037" type="all" />
+	  <view id="View_Landscape" value="51" languageid="31038" type="all" />
+	  <view id="View_Square" value="53" languageid="31263" type="all" />
+    <view id="View_List" value="54" languageid="535" type="all"/>
+</views>

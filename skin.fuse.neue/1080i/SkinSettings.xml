@@ -582,6 +582,62 @@
                         <selected>Skin.HasSetting(hide.busydialog)</selected>
                         <onclick>Skin.ToggleSetting(hide.busydialog)</onclick>
                     </control>
+                    <control type="radiobutton" id="6009">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+	                      <label>Enable forced views</label>
+	                      <onclick>Skin.ToggleSetting(SkinHelper.ForcedViews.Enabled)</onclick>
+	                      <selected>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</selected>
+                    </control>
+    
+                    <control type="button" id="6010" description="Movies">
+	                      <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=movies)</onclick>
+	                      <visible>ControlGroup(9100).HasFocus(9107) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+	                      <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+	                      <label>Forced view for movies: $INFO[Skin.String(SkinHelper.ForcedViews.movies)]</label>
+                    </control>
+                    <control type="button" id="6011" description="TV shows">
+                        <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=tvshows)</onclick>
+                      	<visible>ControlGroup(9100).HasFocus(9107) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+                      	<onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                      	<label>Forced view for tv shows:  $INFO[Skin.String(SkinHelper.ForcedViews.tvshows)]</label>
+                    </control>
+                    
+                    <control type="button" id="6012" description="Seasons">
+                      	<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=seasons)</onclick>
+                      	<visible>ControlGroup(9100).HasFocus(9107) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+                      	<onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                      	<label>Forced view for seasons:  $INFO[Skin.String(SkinHelper.ForcedViews.seasons)]</label>
+                    </control>
+                    
+                    <control type="button" id="6013" description="Episodes">
+                      	<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=episodes)</onclick>
+                      	<visible>ControlGroup(9100).HasFocus(9107) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+                      	<onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                      	<label>Forced view for episodes: $INFO[Skin.String(SkinHelper.ForcedViews.episodes)]</label>
+                    </control>
+                    
+                    <control type="button" id="6014" description="Movie Sets">
+                      	<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=sets)</onclick>
+                      	<visible>ControlGroup(9100).HasFocus(9107) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+                      	<onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                      	<label>Forced view for movie sets: $INFO[Skin.String(SkinHelper.ForcedViews.sets)]</label>
+                    </control>
+                    
+                    <control type="button" id="6015" description="Movies inside Sets">
+                      	<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=setmovies)</onclick>
+                      	<visible>ControlGroup(9100).HasFocus(9107) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+                      	<onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                      	<label>Forced view for movies inside set: $INFO[Skin.String(SkinHelper.ForcedViews.setmovies)]</label>
+                    </control>                
+
                     <!-- ============ -->
                     <!-- Dependencies -->
                     <!-- ============ -->
