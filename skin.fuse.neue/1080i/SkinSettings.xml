@@ -582,6 +582,8 @@
                         <selected>Skin.HasSetting(hide.busydialog)</selected>
                         <onclick>Skin.ToggleSetting(hide.busydialog)</onclick>
                     </control>
+                    
+                    <!-- Forced Views -->
                     <control type="radiobutton" id="6009">
                         <visible>ControlGroup(9100).HasFocus(9107)</visible>
                         <onback>300</onback>
@@ -636,7 +638,15 @@
                       	<onback>300</onback>
                         <include>Defs_Settings_Button</include>
                       	<label>Forced view for movies inside set: $INFO[Skin.String(SkinHelper.ForcedViews.setmovies)]</label>
-                    </control>                
+                    </control>
+                    
+                    <control type="button" id="6016" description="Add-ons">
+                      	<onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=addons)</onclick>
+                      	<visible>ControlGroup(9100).HasFocus(9107) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+                      	<onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                      	<label>Forced view for general add-on menus: $INFO[Skin.String(SkinHelper.ForcedViews.addons)]</label>
+                    </control>
 
                     <!-- ============ -->
                     <!-- Dependencies -->
