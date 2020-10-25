@@ -2,7 +2,7 @@
 <addons>
 <addon
   id="resource.language.el_gr"
-  version="9.9.99"
+  version="9.0.16"
   name="Greek"
   provider-name="Team Kodi">
   <requires>
