@@ -1,0 +1,10 @@
+<views>
+  <view id="List" value="50" languageid="535" type="all" />
+  <view id="ListPortrait" value="501" languageid="31201" type="all" />
+  <view id="BigList" value="51" languageid="537" type="all" />
+  <view id="Slide" value="52" languageid="31222" type="all" />
+  <view id="SlideThumb" value="521" languageid="31203" type="all" />
+  <view id="Posters" value="54" languageid="31200" type="all" />
+  <view id="Landscape" value="55" languageid="31202" type="all" />
+  <view id="Square" value="56" languageid="31225" type="all" />
+</views>
